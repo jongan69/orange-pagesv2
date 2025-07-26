@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { useWallet } from '../contexts/WalletContext';
-import { Wallet, X, Copy, ExternalLink, AlertCircle } from 'lucide-react';
+import { Wallet, X, ExternalLink, AlertCircle } from 'lucide-react';
 
 interface NWCConnectModalProps {
   isOpen: boolean;
@@ -23,10 +23,6 @@ export function NWCConnectModal({ isOpen, onClose }: NWCConnectModalProps) {
       onClose();
       setCredentials('');
     }
-  };
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
   };
 
   if (!isOpen) return null;

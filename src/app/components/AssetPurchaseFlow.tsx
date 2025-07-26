@@ -8,13 +8,11 @@ import {
 } from "lucide-react";
 
 interface AssetPurchaseFlowProps {
-  assetId?: string;
-  onNavigate: (page: string, params?: any) => void;
+  onNavigate: (page: string, params?: unknown) => void;
 }
 
 export function AssetPurchaseFlow({
-  assetId = "1",
-  onNavigate,
+  onNavigate,  
 }: AssetPurchaseFlowProps) {
   const [step, setStep] = useState(1);
   const [quantity, setQuantity] = useState("100");

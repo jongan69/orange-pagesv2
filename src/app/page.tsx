@@ -19,9 +19,9 @@ export default function App() {
   const [pageParams, setPageParams] = useState<PageParams>({});
   const [isWalletModalOpen, setIsWalletModalOpen] = useState(false);
 
-  const navigate = (page: string, params: PageParams = {}) => {
+  const navigate = (page: string, params: unknown = {}) => {
     setCurrentPage(page);
-    setPageParams(params);
+    setPageParams(params as PageParams);
     window.scrollTo(0, 0);
   };
 
@@ -31,8 +31,8 @@ export default function App() {
         return <LandingPage onNavigate={navigate} />;
       case "discover":
         return <AssetDiscoveryPage onNavigate={navigate} />;
-      case "profile":
-        return <NodeProfilePage onNavigate={navigate} />;
+      case "profile": 
+        return <NodeProfilePage />;
       case "register":
         return <RegisterNodePage onNavigate={navigate} />;
       case "dashboard":
@@ -41,7 +41,6 @@ export default function App() {
       case "asset-detail":
         return (
           <AssetPurchaseFlow
-            assetId={pageParams.assetId}
             onNavigate={navigate}
           />
         );

@@ -12,11 +12,11 @@ import {
 } from "lucide-react";
 
 interface AssetDiscoveryPageProps {
-  onNavigate: (page: string, params?: any) => void;
+  onNavigate: (page: string, params?: unknown) => void;
 }
 
 export function AssetDiscoveryPage({
-  onNavigate,
+  onNavigate,  
 }: AssetDiscoveryPageProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState("all");

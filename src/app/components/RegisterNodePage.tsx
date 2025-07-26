@@ -1,16 +1,13 @@
 "use client";
-import { useState } from "react";
-import { Shield, Zap, CheckCircle } from "lucide-react";
+import { Zap } from "lucide-react";
 
 interface RegisterNodePageProps {
-  onNavigate: (page: string, params?: any) => void;
+  onNavigate: (page: string) => void;
 }
 
 export function RegisterNodePage({
   onNavigate,
 }: RegisterNodePageProps) {
-  const [currentStep, setCurrentStep] = useState(1);
-
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-8">

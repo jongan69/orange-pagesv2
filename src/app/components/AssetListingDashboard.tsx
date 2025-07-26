@@ -7,11 +7,11 @@ import {
 } from "lucide-react";
 
 interface AssetListingDashboardProps {
-  onNavigate: (page: string, params?: any) => void;
+  onNavigate: (page: string, params?: unknown) => void;
 }
 
 export function AssetListingDashboard({
-  onNavigate,
+  onNavigate, // eslint-disable-line @typescript-eslint/no-unused-vars      
 }: AssetListingDashboardProps) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

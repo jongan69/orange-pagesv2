@@ -1,12 +1,6 @@
 import { Zap, Star, Shield } from "lucide-react";
 
-interface NodeProfilePageProps {
-  onNavigate: (page: string, params?: any) => void;
-}
-
-export function NodeProfilePage({
-  onNavigate,
-}: NodeProfilePageProps) {
+export function NodeProfilePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Node Header */}
